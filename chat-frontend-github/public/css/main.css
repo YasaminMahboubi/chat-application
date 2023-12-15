@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+/* ---------------------------- global classes --------------------------------------------- */
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+.displayNone {
+    display: none !important;
+}
+.opacityZero{
+    opacity: 0;
+}
+.headersBgColor{
+    background-color: #cde8f8;
+}
+@keyframes showMessageAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ---------------------------- Common to all --------------------------------------------- */
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #b3d6ea;
+}
+button , input{
+    outline: none;
+    border: none;
+}
+/* ---------------------------- speech bubbles --------------------------------------------- */
+.speechBubblesShadow{
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+.userMessages{
+    color: #fff !important;
+    background-color: #65AFD9;
+}
+.unknownUserMessages{
+    margin-left: 3%;
+    color: #040b20;
+    background-color: #fff;
+}
+/* --------------------------- display user ---------------------------------------- */
+.displayUser{
+    height: 80%;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.userDiv{
+    gap: .5rem;
+    position: relative;
+}
+.showUsersDiv{
+    width: 90%;
+    justify-content: space-between;
+}
+.userDiv > p {
+    margin-top: .5rem;
+}
+.eachUser{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50%;
+}
+.userDiv > .status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 28px;
+    top: 28px;
+}
+.emptyListMsg{
+    margin-top: 13.5rem;
+    position: absolute;
+    left: 20%;
+    color: #888;
+    display: flex;
+    gap: .2rem;
+}
+.emptyListMsg > img{
+    width: 25px;
+    height: 25px;
+    opacity: .5;
+}
+.status{
+    background-color: #0CC11E;
+}
+/* ---------------- reqMsg ------------------------------------------ */
+.reqMsgContainer{
+    width: 40%;
+    height: 50%;
+    gap: 1rem;
+    border-radius: 2%;
+    padding: .5rem 1rem;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    flex-direction: column;
+}
+.userDivReq{
+    gap: .5rem;
+    align-items: center;
+}
+.userDivReq > div {
+    width: 65px;
+    height: 65px;
+}
+.reqMsg{
+    background-color: #b0def9;
+    box-shadow: 0 0 10px #CDE8F8;
+}
+.reqMsg > p{
+    font-size: 1.3rem;
+}
+.btnDiv{
+    width: 100%;
+    gap: 1rem;
+}
+.btnDiv > button{
+    width: 30%;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition-duration: 1s;
+    background-color: transparent;
+}
+.btnDiv > button:hover {
+    color: #fff;
+}
+.sendRequest{
+    border: 2px solid #0CC11E;
+    color: #0CC11E;
+}
+.sendRequest:hover{
+    background-color: #0CC11E;;
+}
+.cancelRequest{
+    border: 2px solid rgb(204, 10, 10);
+    color: rgb(204, 10, 10);
+}
+.cancelRequest:hover{
+    background-color:  rgb(204, 10, 10);;
+}
+/* ------------------------------ chat ----------------------------------- */
+.msgDiv{
+    gap: 1rem;
+    width: 100%;
+    height: 70px;
+    padding: 1.5rem;
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+}
+.msgDiv > input{
+    width: 90%;
+    padding: .5rem;
+    color: #040b20;
+    border-radius: 1.5rem;
+    background-color: #fff;
+}
+.submitBtn{
+    color: #fff;
+    padding: .5rem;
+    display: inline-block;
+    border-radius: 1.8rem;
+    background-color: #F75E56;
+    border: 3px solid transparent;
+}
+.submitBtn:hover{
+   border-color: #040b20;
+}
+.unreadMsg{
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: rgb(230, 59, 96);
+}
+/* ------------------------ dark mood ---------------------------------------------------- */
+.userMessagesDark{
+    background-color: #5C8298;
+}
+.unknownUserDark{
+    color: #fff;
+    background-color: #5C985F;
+}
+.grayMain{
+    background-color: #0e0e13;
+}
+.grayBackground{
+    color: #fff !important;
+    background-color: #1D1D2A !important;
+}
+.grayChatBackground{
+    background: #1D1D2A url('/images/bg.webp') no-repeat !important;
+    background-size: contain !important;
+    background-position: top right !important;
+}
+.darkIcons{
+    color: #fff !important;
+}
+.darkIcons:hover{
+    color: #F75E56 !important;
+}
+.lightGrayBackground{
+    color: #fff !important;
+    background-color: #3F4152 !important;
+}
+.darkBtnActive{
+    color: #F75E56 !important;
+}
+.reqMsgDark{
+    background-color: #3F4152 ;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: #fff;
+}
+.opacityLight{
+    background-color: #777;
+    border-radius: 50%;
+}
+.msgDivDark{
+    border-top-color: rgba(0,0,0,0.5) !important;
+}
+.allUnreadMsgDark{
+    color: #fff !important;
+    top: 19% !important;
+    margin-left: 2rem !important;
+}
